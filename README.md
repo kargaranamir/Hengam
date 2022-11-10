@@ -10,7 +10,12 @@
 ## Code (Software)
 
 ### HengamTagger
-The HengamTagger is distributed as [Parstdex](https://github.com/kargaranamir/parstdex) package (will be continuously updated) and is available via [pip](https://pypi.org/project/parstdex).
+The HengamTagger is distributed as [Parstdex](https://github.com/kargaranamir/parstdex) package (will be continuously updated) and is available via [pip](https://pypi.org/project/parstdex). 
+<p align="center">
+  <a href="https://github.com/kargaranamir/parstdex/">
+    <img src="https://user-images.githubusercontent.com/26163093/201149612-8cdaeb64-79e0-4329-9a5b-c4c4a3eac17e.png" width="400">
+  </a>
+</p>
 
 ### HengamTransformer
 In this directory 4 different notebooks are provided. Click on the hyperlinks to open each in Google Colab.
