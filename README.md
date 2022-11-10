@@ -13,7 +13,7 @@
 The HengamTagger is distributed as [Parstdex](https://github.com/kargaranamir/parstdex) package (will be continuously updated) and is available via [pip](https://pypi.org/project/parstdex). 
 <p align="center">
   <a href="https://github.com/kargaranamir/parstdex/">
-    <img src="https://user-images.githubusercontent.com/26163093/201149612-8cdaeb64-79e0-4329-9a5b-c4c4a3eac17e.png" width="400">
+    <img src="https://user-images.githubusercontent.com/26163093/201153110-d14f95fe-020b-4557-984e-ff6957d86a41.png" width="400">
   </a>
 </p>
 
