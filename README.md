@@ -39,3 +39,23 @@ HengamCorpus data along with strong labeled data is uploaded in [HuggingFace](ht
 
 ### Evaluation Data
 HengamGold, challenge set and prediction result of different models on HengamGold is available in [evaluation](./data/evaluation) folder.
+
+
+## Citation
+
+If you use any part of this repository in your research, please cite it using the following BibTex entry.
+```python
+@inproceedings{mirzababaei-etal-2022-hengam,
+    title = "Hengam: An Adversarially Trained Transformer for {P}ersian Temporal Tagging",
+    author = {Mirzababaei, Sajad  and
+      Kargaran, Amir Hossein  and
+      Sch{\"u}tze, Hinrich  and
+      Asgari, Ehsaneddin},
+    booktitle = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th International Joint Conference on Natural Language Processing",
+    year = "2022",
+    address = "Online only",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.aacl-main.74",
+    pages = "1013--1024",
+}
+```
