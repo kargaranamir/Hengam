@@ -11,14 +11,44 @@
 
 ### HengamTagger
 The HengamTagger is distributed as [Parstdex](https://github.com/kargaranamir/parstdex) package (will be continuously updated) and is available via [pip](https://pypi.org/project/parstdex). 
-<p align="center">
-  <a href="https://github.com/kargaranamir/parstdex/">
-    <img src="https://user-images.githubusercontent.com/26163093/201153110-d14f95fe-020b-4557-984e-ff6957d86a41.png" width="400">
-  </a>
-</p>
 
 ### HengamTransformer
-In this directory 4 different notebooks are provided. Click on the hyperlinks to open each in Google Colab.
+
+You can use this model directly downloading the utils and requirements files and installing requirements:
+
+```python
+! wget https://huggingface.co/spaces/kargaranamir/Hengam/raw/main/utils.py
+! wget https://huggingface.co/spaces/kargaranamir/Hengam/raw/main/requirements.txt
+! pip install -r requirements.txt
+```
+
+and downloading the models HengamTransA.pth or HengamTransW.pth and building ner pipline:
+
+```python
+import torch
+from huggingface_hub import hf_hub_download
+from utils import *
+
+# HengamTransW = hf_hub_download(repo_id="kargaranamir/Hengam", filename="HengamTransW.pth")
+HengamTransA = hf_hub_download(repo_id="kargaranamir/Hengam", filename="HengamTransA.pth")
+```
+
+```python
+# ner = NER(model_path=HengamTransW, tags=['B-TIM', 'I-TIM', 'B-DAT', 'I-DAT', 'O'])
+ner = NER(model_path=HengamTransA, tags=['B-TIM', 'I-TIM', 'B-DAT', 'I-DAT', 'O'])
+ner('.سلام من و دوستم ساعت ۸ صبح روز سه شنبه رفتیم دوشنبه بازار ')
+>>
+[{'Text': 'ساعت', 'Tag': 'B-TIM', 'Start': 17, 'End': 21},
+ {'Text': '۸', 'Tag': 'I-TIM', 'Start': 22, 'End': 23},
+ {'Text': 'صبح', 'Tag': 'I-TIM', 'Start': 24, 'End': 27},
+ {'Text': 'روز', 'Tag': 'I-TIM', 'Start': 28, 'End': 31},
+ {'Text': 'سه', 'Tag': 'B-DAT', 'Start': 32, 'End': 34},
+ {'Text': 'شنبه', 'Tag': 'I-DAT', 'Start': 35, 'End': 39}]
+```
+
+
+
+Alos, in this github 4 different notebooks are provided to train and load the model. Click on the hyperlinks to open each in Google Colab.
 
 - Inference and Test 
   - [Inference_HengamTransW.ipynb](https://colab.research.google.com/github/kargaranamir/hengam/blob/main/code/Inference_HengamTransW.ipynb): In this notebook, [HengamTransW.pth](https://huggingface.co/kargaranamir/Hengam/resolve/main/HengamTransW.pth) is downloaded from [Hengam HuggingFace model card](https://huggingface.co/kargaranamir/Hengam), and an inference is provided in the last cells.
